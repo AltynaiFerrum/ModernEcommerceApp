@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "518229156188",
+    "project_id": "modernecommerceapp",
+    "storage_bucket": "modernecommerceapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518229156188:android:942de44d4ca197be0fa199",
+        "android_client_info": {
+          "package_name": "com.jyldyzferr.modernecommerceapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPNRPFA6rnr3J-hlRPS_xSn6YnPe-XUhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
