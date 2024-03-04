@@ -3,12 +3,15 @@ package com.jyldyzferr.modernecommerceapp.di
 import android.app.Application
 import android.content.Context.MODE_PRIVATE
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import com.google.firebase.ktx.Firebase
 import dagger.hilt.components.SingletonComponent
 import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.storage.FirebaseStorage
+import com.jyldyzferr.modernecommerceapp.firebase.FirebaseCommon
 import com.jyldyzferr.modernecommerceapp.util.Constants.INTRODUCTION_SP
 import javax.inject.Singleton
 
@@ -29,14 +32,14 @@ object AppModule {
         application: Application
     ) = application.getSharedPreferences(INTRODUCTION_SP, MODE_PRIVATE)
 
-//    @Provides
-//    @Singleton
-//    fun provideFirebaseCommon(
-//        firebaseAuth: FirebaseAuth,
-//        firestore: FirebaseFirestore
-//    ) = FirebaseCommon(firestore,firebaseAuth)
-//
-//    @Provides
-//    @Singleton
-//    fun provideStorage() = FirebaseStorage.getInstance().reference
+    @Provides
+    @Singleton
+    fun provideFirebaseCommon(
+        firebaseAuth: FirebaseAuth,
+        firestore: FirebaseFirestore
+    ) = FirebaseCommon(firestore, firebaseAuth)
+
+    @Provides
+    @Singleton
+    fun provideStorage() = FirebaseStorage.getInstance().reference
 }

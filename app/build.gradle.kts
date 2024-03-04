@@ -84,8 +84,11 @@ dependencies {
 
     //Firebase
     implementation ("com.google.firebase:firebase-auth:21.0.6")
+    implementation ("com.google.firebase:firebase-firestore-ktx:24.6.0")
+    implementation(platform("com.google.firebase:firebase-bom:32.7.3"))
 
-    
+
+
     //Coroutines with firebase
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.5.1")
 }
